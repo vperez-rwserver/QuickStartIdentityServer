@@ -12,7 +12,9 @@ namespace QuickStartIdentityServer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddIdentityServer()
-                .AddTemporarySigningCredential();
+                .AddTemporarySigningCredential()
+                .AddInMemoryScopes(Config.GetScopes())
+                .AddInMemoryClients(Config.GetClients());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
