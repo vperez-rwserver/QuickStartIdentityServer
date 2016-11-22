@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using IdentityServer4.Models;
+using IdentityServer4.Services.InMemory;
 
 namespace QuickStartIdentityServer
 {
@@ -36,6 +37,25 @@ namespace QuickStartIdentityServer
 
                     // scopes that client has access to
                     AllowedScopes = {"api1"}
+                }
+            };
+        }
+
+        public static List<InMemoryUser> GetUsers()
+        {
+            return new List<InMemoryUser>
+            {
+                new InMemoryUser
+                {
+                    Subject = "1",
+                    Username = "alice",
+                    Password = "password"
+                },
+                new InMemoryUser
+                {
+                    Subject = "2",
+                    Username = "bob",
+                    Password = "password"
                 }
             };
         }
