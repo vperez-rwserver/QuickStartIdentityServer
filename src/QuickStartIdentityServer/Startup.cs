@@ -31,8 +31,8 @@ namespace QuickStartIdentityServer
             }
 
             app.UseIdentityServer();
-            app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
+            app.UseStaticFiles();
         }
     }
 }
