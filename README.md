@@ -4,6 +4,6 @@ This project is the result of following the steps on the [documentation for Iden
 
 The purpose is to use it as a prototype of SSO authentication from a legacy database of users and test how easy is to integrate different Oauth2 libraries to it.
 
-It is published to github so it can be pulled and built automatically on Azure
+It is published to github so it can be pulled and built automatically on Azure.
 
 
