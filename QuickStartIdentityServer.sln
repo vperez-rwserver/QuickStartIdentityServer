@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{11CA3540-0177-4F10-B879-039EF0620E40}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "QuickStartIdentityServer", "src\QuickStartIdentityServer\QuickStartIdentityServer.xproj", "{8E6957D7-6C6F-4FA7-973D-A5F22075FD0D}"
