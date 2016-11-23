@@ -10,6 +10,8 @@ namespace QuickStartIdentityServer
         {
             return new List<Scope>
             {
+                StandardScopes.OpenId,
+                StandardScopes.Profile,
                 new Scope
                 {
                     Name = "api1",
@@ -37,6 +39,23 @@ namespace QuickStartIdentityServer
 
                     // scopes that client has access to
                     AllowedScopes = {"api1"}
+                },
+                new Client
+                {
+                    ClientId = "mvc",
+                    ClientName = "MVC Client",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+
+                    // where to redirect to after login
+                    RedirectUris = {"http://localhost:5002/signin-oidc"},
+
+                    // where to redirect to after logout
+                    PostLogoutRedirectUris = {"http://localhost:5002"},
+                    AllowedScopes = new List<string>
+                    {
+                        StandardScopes.OpenId.Name,
+                        StandardScopes.Profile.Name
+                    }
                 }
             };
         }
